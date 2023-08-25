@@ -154,6 +154,10 @@ alias br=broot
 
 # 配置mv -i，覆写前询问
 alias mv="mv -i"
+# 配置mkdir -p,创建文件时可以连带创建父文件
+alias mkdir="mkdir -p"
+# 配置git 操作别名
+alias gs="git status"
 ################# 配置结束 #################
 
 # 配置使git不会出现中文乱码

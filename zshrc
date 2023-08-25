@@ -76,6 +76,7 @@ plugins=(
 		zsh-autosuggestions
 		zsh-syntax-highlighting  # must be the last
 		zsh-fzf-history-search
+		base16-shell
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -202,6 +203,10 @@ alias echoproxy='
 #export PATH=$VERILATOR_ROOT/bin:$PATH
 #unset后才能编译，有点怪
 
+#----------------------------------------------------#
+#------------------ 部分软件配置 --------------------#
+#----------------------------------------------------#
+
 # neofetch 开机自启动
 # neofetch
 
@@ -218,7 +223,3 @@ source "$fasd_cache"
 unset fasd_cache
 #---------------------------
 
-#---- 反向搜索绑定fzf-----------
-# bindkey '^R' fzf
-
-#-------------------------------
