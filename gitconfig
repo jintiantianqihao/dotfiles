@@ -3,3 +3,8 @@
 	email = you@example.com
 [core]
 	editor = vim
+	excludesfile = /home/zbw/.gitignore_global
+	mouse = false
+[alias]
+	graph = log --all --graph --decorate
+	line = graph --oneline

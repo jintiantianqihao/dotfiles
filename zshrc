@@ -12,7 +12,7 @@ ZSH_THEME="agnoster"
 # ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
+# Setting this variable when ZSH_THEME=random will cause zsh to load 
 # a theme from this variable instead of looking in $ZSH/themes/
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
@@ -82,6 +82,9 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+
+# zsh vim mode
+# bindkey -v
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -159,6 +162,7 @@ alias mv="mv -i"
 alias mkdir="mkdir -p"
 # 配置git 操作别名
 alias gs="git status"
+alias gl="git graph"
 ################# 配置结束 #################
 
 # 配置使git不会出现中文乱码
@@ -222,4 +226,7 @@ fi
 source "$fasd_cache"
 unset fasd_cache
 #---------------------------
+
+# ccache加速编译设置
+export PATH="/usr/lib/ccache:$PATH"
 
