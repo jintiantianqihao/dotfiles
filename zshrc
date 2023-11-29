@@ -137,11 +137,11 @@ export NPC_HOME=${YSYX}/npc
 export NVBOARD_HOME=${YSYX}/nvboard
 export VERILATOR_HOME=/home/zbw/ysyx/verilator
 
+export ISA=riscv32
 ## 配置鸢尾花书快速路径
 export PY=/home/zbw/Matrix/py
 export MA=/home/zbw/Matrix/matrix
 export MATH=/home/zbw/Matrix/math
-
 ## 配置快速脚本
 # 配置ysyx数电实验框架
 alias makeprjsim_create_ysyx="/usr/local/scripts/ysyx.sh"
