@@ -133,6 +133,7 @@ export PATH="$HOME/anaconda3/bin:$PATH"
 export YSYX=/home/zbw/ysyx/ysyx-workbench
 export NEMU_HOME=${YSYX}/nemu
 export AM_HOME=${YSYX}/abstract-machine
+export KERNELS_HOME=${YSYX}/am-kernels
 export NPC_HOME=${YSYX}/npc
 export NVBOARD_HOME=${YSYX}/nvboard
 export VERILATOR_HOME=/home/zbw/ysyx/verilator
@@ -146,7 +147,7 @@ export MATH=/home/zbw/Matrix/math
 # 配置ysyx数电实验框架
 alias makeprjsim_create_ysyx="/usr/local/scripts/ysyx.sh"
 # 配置C语言vscode的debug框架
-alias makecdb_vscode="/usr/local/scripts/cdbug.sh"
+alias dbg="/usr/local/scripts/cdbug.sh"
 ################# 配置结束 #################
 
 ################ 命令别名配置 ##############
