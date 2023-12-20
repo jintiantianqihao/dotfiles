@@ -230,4 +230,5 @@ unset fasd_cache
 
 # ccache加速编译设置
 export PATH="/usr/lib/ccache:$PATH"
-
+# make -j 多线程加速编译
+export MAKEFLAGS="-j $(nproc)"
