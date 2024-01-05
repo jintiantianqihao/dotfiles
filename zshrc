@@ -113,20 +113,20 @@ source $ZSH/oh-my-zsh.sh
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/zbw/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/zbw/.anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/zbw/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/zbw/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/home/zbw/.anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/zbw/.anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/zbw/anaconda3/bin:$PATH"
+        export PATH="/home/zbw/.anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-export PATH="$HOME/anaconda3/bin:$PATH"
+export PATH="$HOME/.anaconda3/bin:$PATH"  # commented out by conda initialize
 
 ############### 快速路径配置 ###############
 ## 配置一生一芯快速路径
@@ -232,3 +232,6 @@ unset fasd_cache
 export PATH="/usr/lib/ccache:$PATH"
 # make -j 多线程加速编译
 export MAKEFLAGS="-j $(nproc)"
+
+# 每次开机自动退出anaconda环境
+conda deactivate
