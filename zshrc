@@ -113,21 +113,21 @@ source $ZSH/oh-my-zsh.sh
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/zbw/.anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/zbw/.anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/zbw/.anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/zbw/.anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
+# __conda_setup="$('/home/zbw/.anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+#     eval "$__conda_setup"
+# else
+#     if [ -f "/home/zbw/.anaconda3/etc/profile.d/conda.sh" ]; then
+#         . "/home/zbw/.anaconda3/etc/profile.d/conda.sh"
+#     else
+#         export PATH="/home/zbw/.anaconda3/bin:$PATH"
+#     fi
+# fi
+# unset __conda_setup
+# # <<< conda initialize <<<
 
 export PATH="$HOME/.anaconda3/bin:$PATH"  # commented out by conda initialize
-
+export PATH="/home/zbw/.cargo/bin:$PATH"  # cargo 配置
 ############### 快速路径配置 ###############
 ## 配置一生一芯快速路径
 export YSYX=/home/zbw/ysyx/ysyx-workbench
@@ -143,6 +143,9 @@ export ISA=riscv32
 export PY=/home/zbw/Matrix/py
 export MA=/home/zbw/Matrix/matrix
 export MATH=/home/zbw/Matrix/math
+
+# 配置fpga学习快速路径
+export AXI=/home/zbw/logic/axi_bus
 ## 配置快速脚本
 # 配置ysyx数电实验框架
 alias makeprjsim_create_ysyx="/usr/local/scripts/ysyx.sh"
@@ -164,6 +167,12 @@ alias mkdir="mkdir -p"
 # 配置git 操作别名
 alias gs="git status"
 alias gl="git graph"
+
+# 配置rv交叉编译别名
+alias rv32gcc="riscv64-linux-gnu-gcc -march=rv32g -mabi=ilp32"
+alias rv64gcc="riscv64-linux-gnu-gcc -march=rv64g -mabi=lp64"
+# 配置rv交叉反汇编别名
+alias rvobjdump="riscv64-linux-gnu-objdump"
 ################# 配置结束 #################
 
 # 配置使git不会出现中文乱码
@@ -234,4 +243,5 @@ export PATH="/usr/lib/ccache:$PATH"
 export MAKEFLAGS="-j $(nproc)"
 
 # 每次开机自动退出anaconda环境
-conda deactivate
+# conda deactivate
+. /home/zbw/.anaconda3/etc/profile.d/conda.sh
