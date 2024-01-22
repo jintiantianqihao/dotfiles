@@ -5,6 +5,7 @@
 	editor = vim
 	excludesfile = /home/zbw/.gitignore_global
 	mouse = false
+	quotepath = false
 [alias]
 	graph = log --all --graph --decorate
 	line = graph --oneline

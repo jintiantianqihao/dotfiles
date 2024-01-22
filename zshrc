@@ -127,7 +127,7 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 export PATH="$HOME/.anaconda3/bin:$PATH"  # commented out by conda initialize
-
+export PATH="/home/zbw/.cargo/bin:$PATH"  # cargo 配置
 ############### 快速路径配置 ###############
 ## 配置一生一芯快速路径
 export YSYX=/home/zbw/ysyx/ysyx-workbench
@@ -164,6 +164,11 @@ alias mkdir="mkdir -p"
 # 配置git 操作别名
 alias gs="git status"
 alias gl="git graph"
+
+# 配置rv交叉编译别名
+alias rv32gcc="riscv64-linux-gnu-gcc -march=rv32g -mabi=ilp32"
+# 配置rv交叉反汇编别名
+alias rvobjdump="riscv64-linux-gnu-objdump"
 ################# 配置结束 #################
 
 # 配置使git不会出现中文乱码
